@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <section id="appForm">
+    <h3>Aplicación Inscripciones</h3>
+    <div>
+      <h5>Lapso académico: <span id="appForm_lblLapso">?</span></h5>
+      <button id="appForm_btCambiarLapso">Cambiar lapso académico</button>
+    </div>
+    <div style="margin-top: 10px;">
+      <button id="appForm_btEstudiantes">Estudiantes</button>
+      <button id="appForm_btMaterias">Materias</button>
+      <button id="appForm_btInscribirMateria">Inscribir materia</button>
+    </div>
+    <table style="margin-top: 10px;">
+      <thead>
+        <tr>
+          <th colspan="4">Estudiantes Inscritos</th>
+        </tr>
+        <tr>
+          <th>Cédula</th>
+          <th>Nombre</th>
+          <th>Materias</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="appForm_tabla">
+      </tbody>
+    </table>
+  </section>
+  <section id="inscripcionForm">
+    <h3>Inscripción de Materia</h3>
+    <input type="text" id="inscripcionForm_inCedula" placeholder="Cédula"></input>
+    <input type="text" id="inscripcionForm_inCodigo" placeholder="Código materia"></input>
+    <button id="inscripcionForm_btAceptar" style="margin-top: 10px;">Aceptar</button>
+    <button id="inscripcionForm_btCancelar">Cancelar</button>
+  </section>
+  <section id="estudiantesForm">
+    <h3>Estudiantes registrados</h3>
+    <p id="estudiantesForm_lblInfo"></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Cédula</th>
+          <th>Apellido</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody id="estudiantesForm_tabla">
+      </tbody>
+    </table>
+    <br>
+    <button id="estudiantesForm_btAgregar">Agregar</button>
+    <button id="estudiantesForm_btModificar">Modificar</button>
+    <button id="estudiantesForm_btEliminar">Eliminar</button>
+    <button id="estudiantesForm_btVolver">Volver</button>
+    <br>
+    <button id="estudiantesForm_btMaterias" style="margin-top: 10px;">Materias</button>
+  </section>
+  <section id="estudianteForm">
+    <h3>Estudiante (<span id="estudianteForm_lblRol">???</span>)</h3>
+    <input type="text" id="estudianteForm_inCedula" placeholder="Cédula"></input>
+    <input type="text" id="estudianteForm_inApellido" placeholder="Apellido"></input>
+    <input type="text" id="estudianteForm_inNombre" placeholder="Nombre"></input>
+    <button id="estudianteForm_btAceptar" style="margin-top: 10px;">Aceptar</button>
+    <button id="estudianteForm_btCancelar">Cancelar</button>
+  </section>
+  <section id="materiasForm">
+    <h3>Materias registradas</h3>
+    <p id="materiasForm_lblInfo"></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Semestre</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody id="materiasForm_tabla">
+      </tbody>
+    </table>
+    <br>
+    <button id="materiasForm_btAgregar">Agregar</button>
+    <button id="materiasForm_btModificar">Modificar</button>
+    <button id="materiasForm_btVolver">Volver</button>
+    <br>
+    <button id="materiasForm_btEstudiantes" style="margin-top: 10px;">Estudiantes</button>
+  </section>
+  <section id="materiaForm">
+    <h3>Materia (<span id="materiaForm_lblRol">???</span>)</h3>
+    <input type="text" id="materiaForm_inCodigo" placeholder="Código"></input>
+    <input type="text" id="materiaForm_inSemestre" placeholder="Semestre"></input>
+    <input type="text" id="materiaForm_inNombre" placeholder="Nombre"></input>
+    <button id="materiaForm_btAceptar" style="margin-top: 10px;">Aceptar</button>
+    <button id="materiaForm_btCancelar">Cancelar</button>
+  </section>
+</body>
+<script type="module">
+  import Cl_principal from "./principal.js";
+  new Cl_principal()
+</script>
+
+</html>
